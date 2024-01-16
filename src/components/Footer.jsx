@@ -14,27 +14,27 @@ export const Footer = () => {
                 <Link
                     heading="REBRANDING"
                     subheading="Learn what we do here"
-                    imgSrc="/assest/footer1.png"
+                    imgSrc="/assest/footer1.PNG"
                     href="#"
                 />
                 <Link
                     heading="CAMPAIGNS "
                     subheading="
                     PRODUCT CAMPAIGNS & PROMOTIONS"
-                    imgSrc="/assest/footer2.png"
+                    imgSrc="/assest/footer2.PNG"
                     href="#"
                 />
                 <Link
                     heading="SOCIAL "
                     subheading="SOCIAL ENGAGEMENT PROGRAMS"
-                    imgSrc="/assest/footer3.png"
+                    imgSrc="/assest/footer3.PNG"
                     href="#"
                 />
                 <Link
                     heading="CUSTOMER "
                     subheading="CUSTOMER LOYALTY PROGRAMS
                     "
-                    imgSrc="/assest/footer4.png"
+                    imgSrc="/assest/footer4.PNG"
                     href="#"
                 />
             </div>
