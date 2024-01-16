@@ -1,0 +1,9 @@
+@media (max-width: 1500px) {
+    .app2 {
+        display: block !important;
+    }
+
+    .app {
+        display: none !important;
+    }
+}

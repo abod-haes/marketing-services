@@ -10,8 +10,9 @@ const Services = () => {
 
     useEffect(() => {
         servicesTop.current.forEach((service, index) => {
-            gsap.to(service, {
+            gsap.timeline().to(service, {
                 duration: 2,
+                opacity: 0,
                 x: 0,
                 y: 256 * 3 - 256 * index,
                 scrollTrigger: {
@@ -23,9 +24,10 @@ const Services = () => {
             });
         });
         servicesBottom.current.forEach((service, index) => {
-            gsap.to(service, {
+            gsap.timeline().to(service, {
                 duration: 2,
                 x: 0,
+                opacity: 0,
                 y: -256 * (index + 1),
                 scrollTrigger: {
                     trigger: ".services",
@@ -67,13 +69,13 @@ const Services = () => {
             {s.map((e, index) => (
                 <h1
                     key={index}
-                    className="H1  text-white text-center  s mx-auto text-[16.625vw]"
+                    className="H1  text-white text-center  s mx-auto text-[256px]"
                     ref={(el) => (servicesTop.current[index] = el)}
                 >
                     Services
                 </h1>
             ))}
-            <h1 className=" text -white relative z-[10]  text-white text-center  s mx-auto text-[16.625vw] space-x-1">
+            <h1 className=" text -white relative z-[10]  text-white text-center  s mx-auto text-[256px] space-x-1">
                 Services
             </h1>
 
