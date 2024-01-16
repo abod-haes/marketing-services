@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Header from "./components/Header";
+import Loading from "./components/Loading";
 const Q = new QueryClient();
 
 export default function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 4000);
+    }, []);
+
+    if (isLoading) {
+        return <Loading />;
+    }
     return (
         <QueryClientProvider client={Q}>
             <h1 className="app2 hidden text-[40px] mx-[20px] mt-[40px] ">
